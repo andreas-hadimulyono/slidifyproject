@@ -2,7 +2,7 @@
 title       : Predicting Car's Miles per Gallon
 subtitle    : A project for Coursera Developing Data Products class
 author      : Andreas Hadimulyono
-job         : Student
+job         : (Use the arrow keys to navigate the slides)
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 

@@ -2,7 +2,7 @@
 title       : Predicting Car's Miles per Gallon
 subtitle    : A project for Coursera Developing Data Products class
 author      : Andreas Hadimulyono
-job         : Student
+job         : (Use the arrow keys to navigate the slides)
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
@@ -14,13 +14,13 @@ knit        : slidify::knit2slides
 ## Purpose
 
 1. When evaluating cost of ownership of a car, it is important to estimate fuel consumption
-2. Low fuel efficiency may unnecessarily expose car owners to volatile fuel price.
+2. Low fuel efficiency may unnecessarily expose car owners to volatile fuel price
 
 --- .slide-1 #slide1 
 
 ## Data Source
 
-1. The algorithm for this application is built from cars dataset
+1. The algorithm for this application is built from cars dataset in R
 2. The dataset has contains a lot of variables. For this application only mode of transmission, number of cylinders, and weight of the car is taken into consideration.
 
 --- .slide-2 #slide2
