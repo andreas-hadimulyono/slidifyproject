@@ -43,38 +43,83 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Motifs</h2>
+    <h2>Purpose</h2>
   </hgroup>
   <article data-timings="">
     <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
+<li>When evaluating cost of ownership of a car, it is important to estimate fuel consumption</li>
+<li>Low fuel efficiency may unnecessarily expose car owners to volatile fuel price.</li>
 </ol>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="class" id="id" style="background:;">
+<slide class="slide-1" id="slide1" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>Data Source</h2>
   </hgroup>
   <article data-timings="">
     <ol>
-<li>TEST</li>
+<li>The algorithm for this application is built from cars dataset</li>
+<li>The dataset has contains a lot of variables. For this application only mode of transmission, number of cylinders, and weight of the car is taken into consideration.</li>
 </ol>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-3" style="background:;">
+<slide class="slide-2" id="slide2" style="background:;">
   <hgroup>
-    <h2>Slide 3</h2>
+    <h2>Model</h2>
   </hgroup>
   <article data-timings="">
-    
+    <ol>
+<li>Linear model is used to fit the data set</li>
+</ol>
+
+<pre><code class="r">data(mtcars)
+fitData &lt;- mtcars[,c(&quot;mpg&quot;, &quot;am&quot;, &quot;cyl&quot;, &quot;wt&quot;)]
+fit &lt;- lm(mpg ~ am + cyl + wt, data = fitData)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="slide-3" id="slide3" style="background:;">
+  <hgroup>
+    <h2>Prediction</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Takes three inputs: mode of transmission, number of cylinders, and weight.</li>
+<li>Input is then used to predict the car&#39;s MPG.</li>
+<li>Example:</li>
+</ol>
+
+<pre><code class="r">newdf &lt;- data.frame(am = 0, cyl = 4, wt = 1.5)
+predict(fit, newdf)
+</code></pre>
+
+<pre><code>##        1 
+## 28.68924
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="slide4" id="slide4" style="background:;">
+  <hgroup>
+    <h2>Application</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Application is built using Shiny.<br></li>
+<li>Hosted on <a href="https://ahadimulyono.shinyapps.io/shiny">https://ahadimulyono.shinyapps.io/shiny</a></li>
+</ol>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -85,20 +130,32 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Motifs'>
+        data-slide=1 title='Purpose'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='Data Source'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Slide 3'>
+        data-slide=3 title='Model'>
          3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Prediction'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Application'>
+         5
       </a>
     </li>
   </ul>
